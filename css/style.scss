@@ -1,0 +1,315 @@
+$cor-principal: #602b96;
+
+@mixin borda-inferior($borda-inferior:.01em solid lightgray){
+  border-bottom: $borda-inferior;
+}
+
+body {
+  background-color: #f3f3f3;
+  font-family: 'Gotham', serif;
+  font-size: 100%;
+}
+
+main, .topo, .menu_principal {
+  width: auto;
+  margin: 0px 100px;
+}
+
+.margin-topo{
+  height:1.3em;
+  background-color: white;
+}
+ 
+header {
+  background-color: white;;
+}
+
+.topo {
+  display: flex;
+}
+
+.logo {
+  width: 20%;
+}
+
+.logo img {
+  width: 6.5em;
+}
+
+.cidade_agora {
+  width: 60%;
+
+  span {
+    width: 30%;
+    @include borda-inferior();
+    padding: 1em;
+    display: flex;
+    margin: auto;
+  }
+
+  img {
+    width: 2em;
+    margin: 0 .5em;
+  }
+
+  p {
+    margin: 0 .5em;
+    display: flex;
+    /*border:1px solid red;*/
+  }
+}
+
+.search-form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 50px;
+  
+  > .field {
+    box-sizing: border-box;
+    flex-grow: 1;
+    border: 1px solid grey;
+    border-radius: 5px 0 0 5px;
+    height: 100%;
+    padding: 0 20px;
+    font-size: 16px;
+    
+    &:focus {
+      outline:none;
+      box-shadow: 0 0 5px .1px $cor-principal;
+    }
+    
+  }
+  
+  > .action {
+    height: 100%;
+    border:0;
+    border-radius: 0 5px 5px 0;
+    background-color: $cor-principal;
+    color: #fff;
+    font-size: 16px;
+    padding: 0 20px;
+     
+    &:hover {
+      opacity: .9;
+      cursor: pointer;
+    }
+  }
+}
+
+/*-----------------------*/
+.menu_principal {
+  border-radius: .5em;
+  margin-top: 1.5em;
+  position: sticky 300px;
+  
+}
+
+.menu_principal ul {
+  display: flex;
+  background-color: white;
+  border-radius: 0.4em;
+}
+
+.menu_principal a:hover {
+  background-color: $cor-principal;
+  color: white;
+}
+
+#active, #active:hover {
+  background-color: white;
+  font-weight: bold;
+  color: black;
+
+}
+
+.menu_principal a {
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  padding: .8em;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-bottom: 3px solid transparent;
+}
+
+.menu_principal a:nth-of-type(1) {
+  margin: 0;
+  border-radius: .4em 0 0 .4em;
+}
+
+.menu_principal a {
+  color: black;
+}
+
+/*-----------------------*/
+.tempo_icon img {
+  width: 60%;
+}
+
+.first-row{
+  display: flex;
+}
+.cidade_ultima, .subscribe {
+  background-color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 1.5em;
+  border: 0.01em solid #f7f6f6;
+  border-radius: .5em;
+}
+
+.cidade_ultima {
+  width: 55%;
+}
+
+.tempo_agora {
+  padding: 1em 2em;
+  margin-top: .5em;
+  display: flex;
+}
+
+.tempo_icon {
+  width: 50%;
+}
+
+.tempo_info {
+  font-family: 'Lora', serif;
+  width: 35%;
+}
+
+.tempo_info h1 {
+  font-size: 3em;
+}
+
+.tempo_info h1, .tempo_info span {
+  font-weight: bold;
+}
+
+.tempo_info p {
+  font-size: 1.5em;
+  margin-bottom: .5em;
+}
+
+.tempo_info p:nth-of-type(1) {
+  margin-top: 1em;
+}
+
+/*-----------------------*/
+.prox_dias {
+  background-color: $cor-principal;
+  color: white;
+  padding: 1em 2em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 0em 0em .5em .5em;
+  border-top: 0.05em solid #e0e0e0;
+}
+
+.prox_dias h1 {
+  text-transform: uppercase;
+  font-size: .8em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.prox_dias ul {
+  margin-top: 1em;
+  display: flex;
+  border-radius: .3em;
+}
+
+.prox_dias li {
+  text-align-last: center;
+  border: .01em solid transparent;
+  padding: .5em;
+  margin: .4em;
+}
+
+.prox_dias ul:hover {
+  background-color: rgba(247, 247, 247, 0.041);
+  border-radius: .3em;
+}
+
+.resumo_prox_dias img {
+  width: 50%;
+}
+
+.resumo_prox_dias p {
+  margin-top: 1em;
+  font-size: .9em;
+}
+
+/*-----------------------*/
+.subscribe {
+  margin-left:5%;
+  width: 40%;
+  padding: 1.5em;
+}
+
+.subscribe h1 {
+  color: $cor-principal;
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+/* Estilizando o formulário */
+.rotulo_form[for="email"], [for="nome"] {
+  text-transform: uppercase;
+  font-size: .8em;
+  font-weight: bold;
+  color: $cor-principal;
+}
+
+.formulario {
+  margin-top: 1em;
+  
+  input {
+    margin-top: .6em;
+  
+    &[type="text"] {
+      border-radius: .3em;
+      padding: .5em;
+      border: .1em solid lightgrey;
+    }
+    
+  
+    &[type="submit"] {
+      background-color: $cor-principal;
+      padding: 1em 2em;
+      color: white;
+      text-transform: uppercase;
+      font-weight: bold;
+      border-radius: .3em;
+      border: .1em solid lightgrey;
+      cursor:pointer;
+    }
+  
+    &[type="submit"]:hover {
+      background-color: #401e61;
+    }
+  }
+}
+
+footer{
+  border:1px solid blue;
+}
+.cidades-rodape {
+  padding:2em;
+  border: 1px solid red;  
+}
+
+
+
+
+
+
+
+
+
+
+/*# sourceMappingURL=style.css.map */

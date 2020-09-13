@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <title>Tempo e Hora</title>
+        <meta name="description" content="Projeto 1 para exercitar HTML5 e CSS3">
+        <meta name="author" content="Gian Corapi">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap" rel="stylesheet">
+        <script>
+        
+
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <div class="margin-topo"></div>
+            <div class="topo">
+
+                <div class = "logo">
+                    <img src="img/logo.png" alt="Weather Channel">
+                </div>
+
+                <div class = "cidade_agora">
+                    <span> 
+                        <img src="img/icones_tempo/003-wind.png">
+                        <p>Berlin</p>
+                        <p>9°</p>
+                        <p>14:44</p>
+                    </span>
+                </div>
+
+                <section class="search-form">
+                    <input type="text" class="field" placeholder="Procure a cidade...">
+                    </input>
+                    <button class="action"><span class="icon material-icons">search</span>
+                    </button>
+                </section>
+
+        
+            </div>
+
+            <nav class = "menu_principal">
+                <ul>
+                    <a href="" id="active"><li>Berlin</li></a>
+                    <a href=""><li>Rom</li></a>
+                    <a href=""><li>Paris</li></a>
+                    <a href=""><li>Madrid</li></a>
+                    <a href=""><li>Lissabon</li></a>
+                    <a href=""><li>Amsterdam</li></a>
+                    <a href=""><li>Dresden</li></a>
+                    <a href=""><li>Nürmberg</li></a>
+                    <a href=""><li>Stuttgart</li></a>
+                    <a href=""><li>Köln</li></a>    
+                </ul>
+
+            </nav>
+        </header>
+        <main class="container">
+
+            <section class="first-row">
+                <section class="cidade_ultima">
+
+                    <div class="tempo_agora">
+
+                        <div class="tempo_info">
+                            <h1>Berlim</h1>
+                            <p>Temperatura: <span>4°</span><p>
+                            <p>Vento: <span>35km/h</span></p>
+                            <p>Sensação: <span>-2°</span></p>
+                        </div>
+
+                        
+                        <div class="tempo_icon">
+                            <img src="img/icones_tempo/002-cloudy.png">
+                        </div>
+
+                                    
+                    </div>
+
+                    <div class="prox_dias">
+                        <h1>Próximos dias na semana</h1>
+                        <ul>
+                            <li class = "resumo_prox_dias -1">
+                                <img src="img/icones_tempo/climate.png">
+                                <p>25/08</p>
+                            </li>
+                            <li class = "resumo_prox_dias -2">
+                                <img src="img/icones_tempo/snowy.png">
+                                <p>26/08</p>
+                            </li>
+                            <li class = "resumo_prox_dias -3">
+                                <img src="img/icones_tempo/cloud.png">
+                                <p>27/08</p>
+                            </li>
+                            <li class = "resumo_prox_dias -4">
+                                <img src="img/icones_tempo/night.png">
+                                <p>28/08</p>
+                            <li>
+                            <li class = "resumo_prox_dias -5">
+                                <img src="img/icones_tempo/sun.png">
+                                <p>29/08</p>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <aside class="subscribe">
+                    <h1>Inscreva-se</h1>
+                    <p>Assine nossa newsletter e receba a previsão semanal da cidade de sua escolha.</p>
+                        
+                    <fieldset name="form_subs">
+                        <form action="" method="GET" class="formulario">
+                            <div class="formulario">
+                                <label class="rotulo_form" for="nome">Nome:
+                                    <input type="text" name="nome" id="nome" placeholder="Seu nome" required>
+                                </label>
+                            </div>
+                            <div class="formulario">
+                                <label class="rotulo_form" for="email">Email:
+                                    <input type="text" name="email" id="email" placeholder="Seu e-mail" required>
+                                </label>
+                            </div>
+                            <div class="formulario">
+                                <label class="rotulo_form"  for="genero">Gênero:
+                                    <label for="masculino">Masculino</label>
+                                    <input type="radio" name="genero" id="masculino">
+                                    <label for="feminino">Feminino</label>
+                                    <input type="radio" name="genero" id="feminino">
+                                </label>
+                            </div>
+                            <div class="formulario">
+                                <input type="submit" value="Me inscrever"/>
+                            </div>
+                        </form>
+                    </fieldset>
+                    
+                </aside>
+            </section>
+
+           
+        </main>
+
+        <footer>
+
+            <section class="cidades-rodape">
+                <ul class="lista-cidades">
+                    <a class="nomecidade" href=""><li>Roma</li></a>
+                    <a class="nomecidade" href=""><li>Veneza</li></a>
+                    <a class="nomecidade" href=""><li>Lisboa</li></a>
+                    <a class="nomecidade" href=""><li>Paris</li></a>
+                </ul>
+            </section>
+
+            <div class="cidade_agora">
+                <img>
+            </div>
+
+            <div class="publi">
+                <img>
+            </div>
+
+
+
+        </footer>
+
+        <script src="js/script.js"></script>
+
+    </body>
+</html>
